@@ -1,0 +1,39 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/raw_shop
+    username: postgres
+    password: 19801980
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        format_sql: true
+  servlet:
+    multipart:
+      max-file-size: 100MB
+
+springdoc:
+  swagger-ui:
+    path: /sw
+#    enabled: true
+  api-docs:
+    path: /api/docs
+
+api:
+  info:
+    title: Raw shop service API
+    description: API to fetch raw details for product
+    version: 1.0.0
+    contactName: Review Service API Team
+    contactEmail: olmospro1978@example.com
+    contactUrl: https://t.me/Murodillayev
+storage:
+  photoStoragePath: /Users/macbookair/Documents/Olmossoft/raw/src/main/resources/storage/
+
+cron:
+  expression: "*/10 * * * * *"
